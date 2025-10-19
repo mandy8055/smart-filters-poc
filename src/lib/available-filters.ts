@@ -22,7 +22,7 @@ export const availableFilters: AvailableFilter[] = [
 
   {
     type: 'RANGE',
-    attribute: 'capacity',
+    attribute: 'specifications.capacity', // ✅ CORRECT PATH
     displayName: 'Capacity',
     valueType: 'SINGLE',
     minValue: 3.5,
@@ -32,7 +32,7 @@ export const availableFilters: AvailableFilter[] = [
 
   {
     type: 'RANGE',
-    attribute: 'noiseLevel',
+    attribute: 'specifications.noiseLevel', // ✅ CORRECT PATH
     displayName: 'Noise Level',
     valueType: 'SINGLE',
     minValue: 45,
@@ -42,7 +42,7 @@ export const availableFilters: AvailableFilter[] = [
 
   {
     type: 'RANGE',
-    attribute: 'spinSpeed',
+    attribute: 'specifications.spinSpeed', // ✅ CORRECT PATH
     displayName: 'Spin Speed',
     valueType: 'SINGLE',
     minValue: 1000,
@@ -106,7 +106,7 @@ export const availableFilters: AvailableFilter[] = [
 
   {
     type: 'STANDARD',
-    attribute: 'energyRating',
+    attribute: 'specifications.energyRating', // ✅ FIXED: Changed from 'energyRating'
     displayName: 'Energy Rating',
     valueType: 'MULTI',
     operator: 'OR',

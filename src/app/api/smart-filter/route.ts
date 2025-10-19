@@ -27,45 +27,104 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    console.log('🔍 Smart filter request:', prompt);
+    // Pre-validation - Check if query contains washing machine related terms
+    if (!isValidWashingMachineQuery(prompt)) {
+      console.log('⚠️ Query rejected:', prompt);
+      return NextResponse.json(
+        {
+          error:
+            "I couldn't find any washing machine-related terms in your query.",
+          suggestion:
+            'Try using terms like: small family, big family, energy efficient, budget, premium, WiFi, quiet, steam cleaning',
+        },
+        { status: 400 },
+      );
+    }
+
+    console.log('🔍 Processing query:', prompt);
 
     // Call HuggingFace API with retry logic
     let response: SmartFilterResponse;
 
     try {
       response = await callHuggingFace(prompt, availableFilters);
-      // Fix common AI mistakes: move misplaced filters
+
+      // Check if AI returned empty filters
+      if (
+        response.rangeFilters.length === 0 &&
+        response.standardFilters.length === 0
+      ) {
+        console.log('⚠️ AI returned empty filters');
+
+        return NextResponse.json(
+          {
+            error:
+              'Could not understand your query. Please try describing what you are looking for.',
+            suggestion:
+              'Try using terms like: budget, premium, small family, big family, energy efficient, WiFi, quiet',
+          },
+          { status: 400 },
+        );
+      }
+
+      // Check confidence score
+      if (response.confidence !== undefined && response.confidence < 0.3) {
+        console.log(`⚠️ Low confidence: ${response.confidence}`);
+
+        return NextResponse.json(
+          {
+            error:
+              "I'm not confident I understood your query correctly. Could you try rephrasing?",
+            suggestion:
+              'Try using clearer terms like: "small family under $800", "energy efficient", "premium WiFi enabled"',
+          },
+          { status: 400 },
+        );
+      }
+
+      // Fix common AI mistakes
       response = normalizeFilterResponse(response);
     } catch (huggingFaceError) {
-      console.error('❌ HuggingFace API failed, attempting fallback...');
+      console.error('❌ AI failed, using fallback');
 
       // Fallback to rule-based parsing
       response = ruleBasedFallback(prompt);
-      console.log('⚠️ Using rule-based fallback');
+
+      // If fallback also returns empty, inform user
+      if (
+        response.rangeFilters.length === 0 &&
+        response.standardFilters.length === 0
+      ) {
+        return NextResponse.json(
+          {
+            error:
+              'Could not process your query. Please try again with clearer terms.',
+            suggestion:
+              'Examples: "small family", "budget friendly", "energy efficient with WiFi"',
+          },
+          { status: 400 },
+        );
+      }
     }
 
     // Validate response structure
     if (!response.rangeFilters || !response.standardFilters) {
-      console.error('❌ Invalid response structure:', response);
+      console.error('❌ Invalid response structure');
       return NextResponse.json(
         { error: 'Failed to parse filters from query' },
         { status: 500 },
       );
     }
 
-    // Log confidence for debugging
-    if (response.confidence) {
-      console.log(`📊 Filter confidence: ${response.confidence}`);
-    }
-
-    console.log('✅ Smart filter response:', {
-      rangeFilters: response.rangeFilters.length,
-      standardFilters: response.standardFilters.length,
+    console.log('✅ Filters applied:', {
+      range: response.rangeFilters.length,
+      standard: response.standardFilters.length,
+      confidence: response.confidence,
     });
 
     return NextResponse.json(response);
   } catch (error) {
-    console.error('❌ Smart filter API error:', error);
+    console.error('❌ API error:', error);
 
     return NextResponse.json(
       {
@@ -78,8 +137,84 @@ export async function POST(request: NextRequest) {
 }
 
 /**
+ * Pre-validation: Check if query contains washing machine related terms
+ */
+function isValidWashingMachineQuery(prompt: string): boolean {
+  const lowerPrompt = prompt.toLowerCase();
+
+  const validKeywords = [
+    // Size/Family
+    'small',
+    'big',
+    'large',
+    'compact',
+    'family',
+    'people',
+    'apartment',
+    'space',
+    // Price
+    'budget',
+    'cheap',
+    'affordable',
+    'expensive',
+    'premium',
+    'luxury',
+    'under',
+    'over',
+    'around',
+    'below',
+    'above',
+    '$',
+    'dollar',
+    'price',
+    // Features
+    'wifi',
+    'smart',
+    'energy',
+    'efficient',
+    'eco',
+    'green',
+    'quiet',
+    'silent',
+    'steam',
+    'allergen',
+    'sanitize',
+    'wash',
+    'clean',
+    'cycle',
+    // Specifications
+    'capacity',
+    'noise',
+    'spin',
+    'speed',
+    'rating',
+    'drum',
+    'motor',
+    // Brands
+    'kitchentech',
+    'homepro',
+    'appliance',
+    'cookmaster',
+    'homemate',
+    // Product types
+    'washer',
+    'washing',
+    'machine',
+    'appliance',
+    'laundry',
+  ];
+
+  const hasValidKeyword = validKeywords.some((keyword) =>
+    lowerPrompt.includes(keyword),
+  );
+
+  const hasNumbers = /\d/.test(prompt);
+
+  return hasValidKeyword || (hasNumbers && lowerPrompt.length < 50);
+}
+
+/**
  * Rule-based fallback when HuggingFace API fails
- * Uses regex patterns to extract basic filters
  */
 function ruleBasedFallback(prompt: string): SmartFilterResponse {
   const lowerPrompt = prompt.toLowerCase();
@@ -147,7 +282,7 @@ function ruleBasedFallback(prompt: string): SmartFilterResponse {
   // Family size / capacity
   if (/(small family|2-3 people|couple)/.test(lowerPrompt)) {
     rangeFilters.push({
-      attribute: 'capacity',
+      attribute: 'specifications.capacity',
       minValue: 4.0,
       maxValue: 4.5,
     });
@@ -155,7 +290,7 @@ function ruleBasedFallback(prompt: string): SmartFilterResponse {
 
   if (/(big family|large family|4\+ people|family of \d+)/.test(lowerPrompt)) {
     rangeFilters.push({
-      attribute: 'capacity',
+      attribute: 'specifications.capacity',
       minValue: 5.0,
     });
   }
@@ -172,7 +307,7 @@ function ruleBasedFallback(prompt: string): SmartFilterResponse {
 
   if (/(energy efficient|eco-friendly|energy star)/.test(lowerPrompt)) {
     standardFilters.push({
-      attribute: 'energyRating',
+      attribute: 'specifications.energyRating',
       operator: 'OR',
       valueType: 'MULTI',
       values: ['A_PLUS_PLUS', 'A_PLUS_PLUS_PLUS'],
@@ -181,7 +316,7 @@ function ruleBasedFallback(prompt: string): SmartFilterResponse {
 
   if (/(quiet|silent|low noise)/.test(lowerPrompt)) {
     rangeFilters.push({
-      attribute: 'noiseLevel',
+      attribute: 'specifications.noiseLevel',
       maxValue: 60,
     });
   }
@@ -216,15 +351,12 @@ function ruleBasedFallback(prompt: string): SmartFilterResponse {
   return {
     rangeFilters,
     standardFilters,
-    confidence: 0.5, // Lower confidence for fallback
+    confidence: 0.5,
   };
 }
 
 /**
  * Normalizes AI response by fixing common mistakes
- * - Moves standard filters that were placed in rangeFilters
- * - Fixes attribute paths (e.g., energyRating → specifications.energyRating)
- * - Ensures proper structure
  */
 function normalizeFilterResponse(response: any): SmartFilterResponse {
   const normalized: SmartFilterResponse = {
@@ -233,7 +365,6 @@ function normalizeFilterResponse(response: any): SmartFilterResponse {
     confidence: response.confidence,
   };
 
-  // Attribute path mappings (fix common AI mistakes)
   const attributePathFixes: { [key: string]: string } = {
     energyRating: 'specifications.energyRating',
     capacity: 'specifications.capacity',
@@ -241,13 +372,12 @@ function normalizeFilterResponse(response: any): SmartFilterResponse {
     spinSpeed: 'specifications.spinSpeed',
   };
 
-  // Standard filter attributes (should NOT be in rangeFilters)
   const standardFilterAttributes = [
     'priceTier',
     'brand',
     'color',
     'specifications.energyRating',
-    'energyRating', // Legacy - will be auto-fixed
+    'energyRating',
     'features.wifiEnabled',
     'features.smartDiagnosis',
     'features.steamCleaning',
@@ -260,24 +390,15 @@ function normalizeFilterResponse(response: any): SmartFilterResponse {
 
   // Process rangeFilters
   response.rangeFilters?.forEach((filter: any) => {
-    // Fix attribute path if needed
     let attribute = filter.attribute;
     if (attributePathFixes[attribute]) {
-      console.log(
-        `🔧 Fixing path: ${attribute} → ${attributePathFixes[attribute]}`,
-      );
       attribute = attributePathFixes[attribute];
     }
 
-    // Check if this is actually a standard filter
     if (
       standardFilterAttributes.includes(attribute) ||
       standardFilterAttributes.includes(filter.attribute)
     ) {
-      console.log(
-        `⚠️ Moving ${attribute} from rangeFilters to standardFilters`,
-      );
-
       normalized.standardFilters.push({
         attribute: attribute,
         operator: filter.operator || 'OR',
@@ -297,20 +418,12 @@ function normalizeFilterResponse(response: any): SmartFilterResponse {
   normalized.standardFilters = normalized.standardFilters.map((filter) => {
     let attribute = filter.attribute;
     if (attributePathFixes[attribute]) {
-      console.log(
-        `🔧 Fixing path: ${attribute} → ${attributePathFixes[attribute]}`,
-      );
       attribute = attributePathFixes[attribute];
     }
     return {
       ...filter,
       attribute,
     };
-  });
-
-  console.log('✅ Normalized response:', {
-    rangeFilters: normalized.rangeFilters.length,
-    standardFilters: normalized.standardFilters.length,
   });
 
   return normalized;

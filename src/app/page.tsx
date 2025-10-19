@@ -171,15 +171,6 @@ function applyFilters(products: Product[], filters: AppliedFilters): Product[] {
 
       const productValue = getNestedValue(product, attribute);
 
-      // DEBUG: Log the comparison
-      if (attribute === 'energyRating') {
-        console.log('🔍 Comparing:', {
-          productValue,
-          filterValues: Array.from(values),
-          product: product.id,
-        });
-      }
-
       // Handle boolean values (features)
       if (typeof productValue === 'boolean') {
         // For boolean filters, we only check if "true" is selected
