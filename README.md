@@ -129,7 +129,7 @@ See [docs/TESTING.md](docs/TESTING.md) for comprehensive test scenarios.
 
 **Deployment:**
 
-- Vercel (recommended)
+- Vercel
 - Environment variables via Vercel dashboard
 
 ---
@@ -221,59 +221,7 @@ Get your key: [HuggingFace Settings](https://huggingface.co/settings/tokens) (fr
 
 ---
 
-## Development
-
-### Available Scripts
-
-```bash
-# Start development server
-pnpm dev
-
-# Build for production
-pnpm build
-
-# Start production server
-pnpm start
-
-# Run linter
-pnpm lint
-
-# Format code
-pnpm format
-
-# Generate mock products (if needed)
-pnpm generate:products
-```
-
-### Making Changes
-
-1. **Update filters** - Edit `src/lib/available-filters.ts`
-2. **Update AI prompt** - Edit `src/lib/services/huggingface.ts`
-3. **Update validation** - Edit `src/app/api/smart-filter/route.ts`
-4. **Update UI** - Edit components in `src/components/`
-
----
-
 ## Deployment
-
-### Deploy to Vercel (Recommended)
-
-```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Login
-vercel login
-
-# Deploy
-vercel --prod
-```
-
-Or use the Vercel dashboard:
-
-1. Import Git repository
-2. Add `HUGGINGFACE_API_KEY` environment variable
-3. Deploy
 
 See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for detailed instructions.
 
@@ -392,17 +340,6 @@ See [docs/TESTING.md](docs/TESTING.md) for comprehensive test scenarios.
 
 ---
 
-## Contributing
-
-This is a POC project. If you want to suggest improvements:
-
-1. Document the issue/enhancement
-2. Test your changes thoroughly
-3. Update relevant documentation
-4. Check all test scenarios pass
-
----
-
 ## License
 
 MIT © 2025 - See [LICENSE](LICENSE) for details.
@@ -426,7 +363,3 @@ For questions or issues:
 - **Vercel** - Hosting and deployment platform
 - **Next.js** - React framework
 - **Mistral AI** - Mistral-7B-Instruct model
-
----
-
-**Built with ❤️ for better e-commerce experiences**
