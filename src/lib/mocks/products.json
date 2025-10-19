@@ -1,0 +1,2002 @@
+[
+  {
+    "id": "WM_0001",
+    "brand": "HOMEMATE",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 716,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 4.1,
+      "energyRating": "B",
+      "noiseLevel": 67,
+      "spinSpeed": 1000,
+      "width": 28,
+      "height": 39,
+      "depth": 32,
+      "weight": 209
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": true,
+      "voiceControl": false,
+      "energyStarCertified": false,
+      "waterSenseApproved": false,
+      "steamCleaning": true,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": true
+    },
+    "description": "Reliable and affordable front-load washer from HomeMate. Compact 4.1 cu ft capacity ideal for apartments. Features steam cleaning for superior cleaning."
+  },
+  {
+    "id": "WM_0002",
+    "brand": "HOMEMATE",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 439,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 3.9,
+      "energyRating": "A",
+      "noiseLevel": 68,
+      "spinSpeed": 1200,
+      "width": 28,
+      "height": 42,
+      "depth": 30,
+      "weight": 246
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": false,
+      "waterSenseApproved": false,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": true
+    },
+    "description": "Reliable and affordable front-load washer from HomeMate. Compact 3.9 cu ft capacity ideal for apartments."
+  },
+  {
+    "id": "WM_0003",
+    "brand": "HOMEMATE",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 460,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 3.7,
+      "energyRating": "B",
+      "noiseLevel": 72,
+      "spinSpeed": 1100,
+      "width": 29,
+      "height": 42,
+      "depth": 30,
+      "weight": 217
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": false,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": false
+    },
+    "description": "Reliable and affordable front-load washer from HomeMate. Compact 3.7 cu ft capacity ideal for apartments. Durable stainless steel drum construction."
+  },
+  {
+    "id": "WM_0004",
+    "brand": "KITCHENTECH",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 531,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 3.8,
+      "energyRating": "B",
+      "noiseLevel": 70,
+      "spinSpeed": 1000,
+      "width": 30,
+      "height": 39,
+      "depth": 31,
+      "weight": 192
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": false,
+      "waterSenseApproved": false,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": false
+    },
+    "description": "Reliable and affordable front-load washer from KitchenTech. Compact 3.8 cu ft capacity ideal for apartments."
+  },
+  {
+    "id": "WM_0005",
+    "brand": "APPLIANCE_PLUS",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 379,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 3.8,
+      "energyRating": "B",
+      "noiseLevel": 66,
+      "spinSpeed": 1000,
+      "width": 29,
+      "height": 42,
+      "depth": 31,
+      "weight": 233
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": true,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": false
+    },
+    "description": "Reliable and affordable front-load washer from Appliance Plus. Compact 3.8 cu ft capacity ideal for apartments. Features steam cleaning, sanitize cycle for superior cleaning. Durable stainless steel drum construction."
+  },
+  {
+    "id": "WM_0006",
+    "brand": "KITCHENTECH",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 350,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 4.1,
+      "energyRating": "A",
+      "noiseLevel": 68,
+      "spinSpeed": 1200,
+      "width": 27,
+      "height": 39,
+      "depth": 32,
+      "weight": 208
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": false
+    },
+    "description": "Reliable and affordable front-load washer from KitchenTech. Compact 4.1 cu ft capacity ideal for apartments."
+  },
+  {
+    "id": "WM_0007",
+    "brand": "HOMEPRO",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 545,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 3.7,
+      "energyRating": "A",
+      "noiseLevel": 65,
+      "spinSpeed": 1000,
+      "width": 28,
+      "height": 39,
+      "depth": 33,
+      "weight": 232
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": false,
+      "allergenCycle": true,
+      "quickWash": false,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Reliable and affordable front-load washer from HomePro. Compact 3.7 cu ft capacity ideal for apartments. Features allergen removal for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0008",
+    "brand": "COOKMASTER",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 570,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 3.9,
+      "energyRating": "A",
+      "noiseLevel": 65,
+      "spinSpeed": 1100,
+      "width": 29,
+      "height": 42,
+      "depth": 34,
+      "weight": 239
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": false
+    },
+    "description": "Reliable and affordable front-load washer from CookMaster. Compact 3.9 cu ft capacity ideal for apartments. Features steam cleaning, allergen removal for superior cleaning. Durable stainless steel drum construction."
+  },
+  {
+    "id": "WM_0009",
+    "brand": "COOKMASTER",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 977,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 3.7,
+      "energyRating": "A",
+      "noiseLevel": 68,
+      "spinSpeed": 1200,
+      "width": 30,
+      "height": 41,
+      "depth": 32,
+      "weight": 225
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": true,
+      "voiceControl": false,
+      "energyStarCertified": false,
+      "waterSenseApproved": true,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": false
+    },
+    "description": "Reliable and affordable front-load washer from CookMaster. Compact 3.7 cu ft capacity ideal for apartments. Features sanitize cycle for superior cleaning. Durable stainless steel drum construction."
+  },
+  {
+    "id": "WM_0010",
+    "brand": "HOMEMATE",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 830,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 3.7,
+      "energyRating": "B",
+      "noiseLevel": 71,
+      "spinSpeed": 1000,
+      "width": 29,
+      "height": 38,
+      "depth": 30,
+      "weight": 214
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": false,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": false
+    },
+    "description": "Reliable and affordable front-load washer from HomeMate. Compact 3.7 cu ft capacity ideal for apartments. Features sanitize cycle for superior cleaning."
+  },
+  {
+    "id": "WM_0011",
+    "brand": "HOMEMATE",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 468,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 4,
+      "energyRating": "B",
+      "noiseLevel": 69,
+      "spinSpeed": 1000,
+      "width": 29,
+      "height": 41,
+      "depth": 33,
+      "weight": 210
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": false,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": false
+    },
+    "description": "Reliable and affordable front-load washer from HomeMate. Compact 4 cu ft capacity ideal for apartments. Features steam cleaning for superior cleaning."
+  },
+  {
+    "id": "WM_0012",
+    "brand": "KITCHENTECH",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 959,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 3.9,
+      "energyRating": "B",
+      "noiseLevel": 65,
+      "spinSpeed": 1000,
+      "width": 28,
+      "height": 38,
+      "depth": 32,
+      "weight": 186
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": false,
+      "waterSenseApproved": false,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": false,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": false
+    },
+    "description": "Reliable and affordable front-load washer from KitchenTech. Compact 3.9 cu ft capacity ideal for apartments. Durable stainless steel drum construction."
+  },
+  {
+    "id": "WM_0013",
+    "brand": "HOMEPRO",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 620,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 3.7,
+      "energyRating": "A",
+      "noiseLevel": 68,
+      "spinSpeed": 1000,
+      "width": 30,
+      "height": 39,
+      "depth": 34,
+      "weight": 240
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": false,
+      "waterSenseApproved": false,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": false
+    },
+    "description": "Reliable and affordable front-load washer from HomePro. Compact 3.7 cu ft capacity ideal for apartments. Features WiFi connectivity, sanitize cycle for superior cleaning."
+  },
+  {
+    "id": "WM_0014",
+    "brand": "HOMEPRO",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 965,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 4.2,
+      "energyRating": "A",
+      "noiseLevel": 71,
+      "spinSpeed": 1000,
+      "width": 29,
+      "height": 42,
+      "depth": 34,
+      "weight": 219
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": false,
+      "waterSenseApproved": true,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": true
+    },
+    "description": "Reliable and affordable front-load washer from HomePro. Compact 4.2 cu ft capacity ideal for apartments."
+  },
+  {
+    "id": "WM_0015",
+    "brand": "APPLIANCE_PLUS",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 502,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "BUDGET",
+    "specifications": {
+      "capacity": 3.5,
+      "energyRating": "B",
+      "noiseLevel": 68,
+      "spinSpeed": 1100,
+      "width": 28,
+      "height": 42,
+      "depth": 34,
+      "weight": 228
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": false,
+      "waterSenseApproved": false,
+      "steamCleaning": true,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": false
+    },
+    "description": "Reliable and affordable front-load washer from Appliance Plus. Compact 3.5 cu ft capacity ideal for apartments. Features steam cleaning for superior cleaning."
+  },
+  {
+    "id": "WM_0016",
+    "brand": "APPLIANCE_PLUS",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 1878,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.2,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 60,
+      "spinSpeed": 1200,
+      "width": 28,
+      "height": 38,
+      "depth": 31,
+      "weight": 219
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": false,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": false
+    },
+    "description": "Feature-rich and dependable front-load washer from Appliance Plus. Compact 4.2 cu ft capacity ideal for apartments. Durable stainless steel drum construction."
+  },
+  {
+    "id": "WM_0017",
+    "brand": "KITCHENTECH",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 1763,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.5,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 59,
+      "spinSpeed": 1200,
+      "width": 29,
+      "height": 40,
+      "depth": 31,
+      "weight": 181
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Feature-rich and dependable front-load washer from KitchenTech. Spacious 4.5 cu ft capacity for everyday loads. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0018",
+    "brand": "HOMEPRO",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 1430,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 60,
+      "spinSpeed": 1300,
+      "width": 30,
+      "height": 39,
+      "depth": 32,
+      "weight": 217
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": false,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Feature-rich and dependable front-load washer from HomePro. Compact 4 cu ft capacity ideal for apartments. Features allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0019",
+    "brand": "COOKMASTER",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 1443,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.5,
+      "energyRating": "A",
+      "noiseLevel": 63,
+      "spinSpeed": 1300,
+      "width": 27,
+      "height": 41,
+      "depth": 31,
+      "weight": 204
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": true,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Feature-rich and dependable front-load washer from CookMaster. Spacious 4.5 cu ft capacity for everyday loads. Features steam cleaning, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0020",
+    "brand": "KITCHENTECH",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 1861,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.3,
+      "energyRating": "A",
+      "noiseLevel": 61,
+      "spinSpeed": 1200,
+      "width": 27,
+      "height": 39,
+      "depth": 31,
+      "weight": 246
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": true,
+      "voiceControl": false,
+      "energyStarCertified": false,
+      "waterSenseApproved": true,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": true
+    },
+    "description": "Feature-rich and dependable front-load washer from KitchenTech. Compact 4.3 cu ft capacity ideal for apartments. Features WiFi connectivity for superior cleaning."
+  },
+  {
+    "id": "WM_0021",
+    "brand": "APPLIANCE_PLUS",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 1370,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.5,
+      "energyRating": "A",
+      "noiseLevel": 62,
+      "spinSpeed": 1300,
+      "width": 27,
+      "height": 39,
+      "depth": 30,
+      "weight": 186
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": true,
+      "energyStarCertified": false,
+      "waterSenseApproved": false,
+      "steamCleaning": true,
+      "allergenCycle": false,
+      "quickWash": false,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": false
+    },
+    "description": "Feature-rich and dependable front-load washer from Appliance Plus. Spacious 4.5 cu ft capacity for everyday loads. Features steam cleaning for superior cleaning. Durable stainless steel drum construction."
+  },
+  {
+    "id": "WM_0022",
+    "brand": "HOMEPRO",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 2775,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.4,
+      "energyRating": "A",
+      "noiseLevel": 58,
+      "spinSpeed": 1300,
+      "width": 28,
+      "height": 38,
+      "depth": 34,
+      "weight": 249
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": true
+    },
+    "description": "Feature-rich and dependable front-load washer from HomePro. Compact 4.4 cu ft capacity ideal for apartments. Features WiFi connectivity, steam cleaning for superior cleaning."
+  },
+  {
+    "id": "WM_0023",
+    "brand": "KITCHENTECH",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 1472,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.6,
+      "energyRating": "A",
+      "noiseLevel": 58,
+      "spinSpeed": 1200,
+      "width": 30,
+      "height": 40,
+      "depth": 33,
+      "weight": 249
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": true
+    },
+    "description": "Feature-rich and dependable front-load washer from KitchenTech. Spacious 4.6 cu ft capacity for everyday loads. Features steam cleaning, allergen removal for superior cleaning."
+  },
+  {
+    "id": "WM_0024",
+    "brand": "KITCHENTECH",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 1114,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.4,
+      "energyRating": "A",
+      "noiseLevel": 61,
+      "spinSpeed": 1300,
+      "width": 30,
+      "height": 39,
+      "depth": 32,
+      "weight": 196
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": true,
+      "voiceControl": false,
+      "energyStarCertified": false,
+      "waterSenseApproved": true,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": false
+    },
+    "description": "Feature-rich and dependable front-load washer from KitchenTech. Compact 4.4 cu ft capacity ideal for apartments."
+  },
+  {
+    "id": "WM_0025",
+    "brand": "KITCHENTECH",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 2554,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.7,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 59,
+      "spinSpeed": 1400,
+      "width": 30,
+      "height": 38,
+      "depth": 33,
+      "weight": 230
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": true,
+      "voiceControl": true,
+      "energyStarCertified": false,
+      "waterSenseApproved": false,
+      "steamCleaning": true,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": false
+    },
+    "description": "Feature-rich and dependable front-load washer from KitchenTech. Spacious 4.7 cu ft capacity for everyday loads. Features WiFi connectivity, steam cleaning, sanitize cycle for superior cleaning."
+  },
+  {
+    "id": "WM_0026",
+    "brand": "HOMEPRO",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 1936,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.3,
+      "energyRating": "A",
+      "noiseLevel": 58,
+      "spinSpeed": 1300,
+      "width": 28,
+      "height": 42,
+      "depth": 31,
+      "weight": 187
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": true,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": false,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": false
+    },
+    "description": "Feature-rich and dependable front-load washer from HomePro. Compact 4.3 cu ft capacity ideal for apartments. Features allergen removal for superior cleaning. Durable stainless steel drum construction."
+  },
+  {
+    "id": "WM_0027",
+    "brand": "HOMEPRO",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 1756,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 58,
+      "spinSpeed": 1400,
+      "width": 29,
+      "height": 40,
+      "depth": 33,
+      "weight": 183
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Feature-rich and dependable front-load washer from HomePro. Compact 4 cu ft capacity ideal for apartments. Features steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0028",
+    "brand": "COOKMASTER",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 1965,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.6,
+      "energyRating": "A",
+      "noiseLevel": 63,
+      "spinSpeed": 1200,
+      "width": 29,
+      "height": 39,
+      "depth": 30,
+      "weight": 241
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": false
+    },
+    "description": "Feature-rich and dependable front-load washer from CookMaster. Spacious 4.6 cu ft capacity for everyday loads. Features sanitize cycle for superior cleaning. Durable stainless steel drum construction."
+  },
+  {
+    "id": "WM_0029",
+    "brand": "COOKMASTER",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 2183,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.1,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 60,
+      "spinSpeed": 1400,
+      "width": 29,
+      "height": 41,
+      "depth": 34,
+      "weight": 206
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": true,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": false
+    },
+    "description": "Feature-rich and dependable front-load washer from CookMaster. Compact 4.1 cu ft capacity ideal for apartments. Features WiFi connectivity, steam cleaning, allergen removal for superior cleaning."
+  },
+  {
+    "id": "WM_0030",
+    "brand": "HOMEPRO",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 1415,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.4,
+      "energyRating": "A",
+      "noiseLevel": 62,
+      "spinSpeed": 1200,
+      "width": 30,
+      "height": 38,
+      "depth": 32,
+      "weight": 180
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": true,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": false,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": false
+    },
+    "description": "Feature-rich and dependable front-load washer from HomePro. Compact 4.4 cu ft capacity ideal for apartments. Features allergen removal for superior cleaning."
+  },
+  {
+    "id": "WM_0031",
+    "brand": "HOMEPRO",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 1892,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.3,
+      "energyRating": "A",
+      "noiseLevel": 58,
+      "spinSpeed": 1200,
+      "width": 28,
+      "height": 41,
+      "depth": 34,
+      "weight": 228
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": false,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": true
+    },
+    "description": "Feature-rich and dependable front-load washer from HomePro. Compact 4.3 cu ft capacity ideal for apartments. Features allergen removal for superior cleaning."
+  },
+  {
+    "id": "WM_0032",
+    "brand": "COOKMASTER",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 2071,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.2,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 62,
+      "spinSpeed": 1400,
+      "width": 30,
+      "height": 42,
+      "depth": 34,
+      "weight": 238
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Feature-rich and dependable front-load washer from CookMaster. Compact 4.2 cu ft capacity ideal for apartments. Features steam cleaning, allergen removal for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0033",
+    "brand": "KITCHENTECH",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 1776,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.6,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 61,
+      "spinSpeed": 1200,
+      "width": 30,
+      "height": 39,
+      "depth": 31,
+      "weight": 229
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": true,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Feature-rich and dependable front-load washer from KitchenTech. Spacious 4.6 cu ft capacity for everyday loads. Features steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0034",
+    "brand": "KITCHENTECH",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 2304,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.1,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 58,
+      "spinSpeed": 1300,
+      "width": 30,
+      "height": 42,
+      "depth": 31,
+      "weight": 225
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": false,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": false
+    },
+    "description": "Feature-rich and dependable front-load washer from KitchenTech. Compact 4.1 cu ft capacity ideal for apartments. Features sanitize cycle for superior cleaning. Durable stainless steel drum construction."
+  },
+  {
+    "id": "WM_0035",
+    "brand": "HOMEPRO",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 2334,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "MID_RANGE",
+    "specifications": {
+      "capacity": 4.3,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 58,
+      "spinSpeed": 1400,
+      "width": 27,
+      "height": 41,
+      "depth": 33,
+      "weight": 231
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": true,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": true,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": false
+    },
+    "description": "Feature-rich and dependable front-load washer from HomePro. Compact 4.3 cu ft capacity ideal for apartments. Features steam cleaning for superior cleaning."
+  },
+  {
+    "id": "WM_0036",
+    "brand": "APPLIANCE_PLUS",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 4639,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "PREMIUM",
+    "specifications": {
+      "capacity": 5.3,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 52,
+      "spinSpeed": 1500,
+      "width": 29,
+      "height": 40,
+      "depth": 30,
+      "weight": 223
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": true,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Premium quality with advanced features front-load washer from Appliance Plus. Extra-large 5.3 cu ft capacity perfect for families. Features steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0037",
+    "brand": "HOMEPRO",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 3969,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "PREMIUM",
+    "specifications": {
+      "capacity": 4.9,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 55,
+      "spinSpeed": 1600,
+      "width": 29,
+      "height": 38,
+      "depth": 30,
+      "weight": 197
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": true,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Premium quality with advanced features front-load washer from HomePro. Spacious 4.9 cu ft capacity for everyday loads. Features WiFi connectivity, steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0038",
+    "brand": "KITCHENTECH",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 3238,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "PREMIUM",
+    "specifications": {
+      "capacity": 5,
+      "energyRating": "A_PLUS_PLUS",
+      "noiseLevel": 52,
+      "spinSpeed": 1600,
+      "width": 27,
+      "height": 38,
+      "depth": 33,
+      "weight": 181
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": true,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Premium quality with advanced features front-load washer from KitchenTech. Extra-large 5 cu ft capacity perfect for families. Features WiFi connectivity, steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0039",
+    "brand": "HOMEPRO",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 4813,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "PREMIUM",
+    "specifications": {
+      "capacity": 5.2,
+      "energyRating": "A_PLUS_PLUS",
+      "noiseLevel": 56,
+      "spinSpeed": 1500,
+      "width": 27,
+      "height": 42,
+      "depth": 32,
+      "weight": 187
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": true,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Premium quality with advanced features front-load washer from HomePro. Extra-large 5.2 cu ft capacity perfect for families. Features WiFi connectivity, steam cleaning, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0040",
+    "brand": "APPLIANCE_PLUS",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 4225,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "PREMIUM",
+    "specifications": {
+      "capacity": 4.7,
+      "energyRating": "A_PLUS_PLUS",
+      "noiseLevel": 56,
+      "spinSpeed": 1500,
+      "width": 30,
+      "height": 42,
+      "depth": 32,
+      "weight": 199
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": true,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Premium quality with advanced features front-load washer from Appliance Plus. Spacious 4.7 cu ft capacity for everyday loads. Features WiFi connectivity, steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0041",
+    "brand": "KITCHENTECH",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 3548,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "PREMIUM",
+    "specifications": {
+      "capacity": 5.1,
+      "energyRating": "A_PLUS_PLUS",
+      "noiseLevel": 52,
+      "spinSpeed": 1400,
+      "width": 29,
+      "height": 41,
+      "depth": 32,
+      "weight": 222
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": false,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": false,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": false
+    },
+    "description": "Premium quality with advanced features front-load washer from KitchenTech. Extra-large 5.1 cu ft capacity perfect for families. Features WiFi connectivity, steam cleaning, sanitize cycle for superior cleaning."
+  },
+  {
+    "id": "WM_0042",
+    "brand": "COOKMASTER",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 4397,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "PREMIUM",
+    "specifications": {
+      "capacity": 5.1,
+      "energyRating": "A_PLUS_PLUS",
+      "noiseLevel": 54,
+      "spinSpeed": 1400,
+      "width": 30,
+      "height": 40,
+      "depth": 30,
+      "weight": 209
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": false,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": false,
+      "directDriveMotor": true
+    },
+    "description": "Premium quality with advanced features front-load washer from CookMaster. Extra-large 5.1 cu ft capacity perfect for families. Features WiFi connectivity, steam cleaning, allergen removal, sanitize cycle for superior cleaning."
+  },
+  {
+    "id": "WM_0043",
+    "brand": "COOKMASTER",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 4090,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "PREMIUM",
+    "specifications": {
+      "capacity": 4.6,
+      "energyRating": "A_PLUS",
+      "noiseLevel": 52,
+      "spinSpeed": 1600,
+      "width": 29,
+      "height": 39,
+      "depth": 31,
+      "weight": 240
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": false,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": false,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": false
+    },
+    "description": "Premium quality with advanced features front-load washer from CookMaster. Spacious 4.6 cu ft capacity for everyday loads. Features WiFi connectivity, steam cleaning, allergen removal for superior cleaning. Durable stainless steel drum construction."
+  },
+  {
+    "id": "WM_0044",
+    "brand": "APPLIANCE_PLUS",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 3776,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "PREMIUM",
+    "specifications": {
+      "capacity": 5.2,
+      "energyRating": "A_PLUS_PLUS",
+      "noiseLevel": 53,
+      "spinSpeed": 1600,
+      "width": 27,
+      "height": 38,
+      "depth": 34,
+      "weight": 245
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": false,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": false,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Premium quality with advanced features front-load washer from Appliance Plus. Extra-large 5.2 cu ft capacity perfect for families. Features steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0045",
+    "brand": "COOKMASTER",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 3950,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "PREMIUM",
+    "specifications": {
+      "capacity": 4.6,
+      "energyRating": "A_PLUS_PLUS",
+      "noiseLevel": 53,
+      "spinSpeed": 1500,
+      "width": 28,
+      "height": 42,
+      "depth": 31,
+      "weight": 203
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": true,
+      "voiceControl": false,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Premium quality with advanced features front-load washer from CookMaster. Spacious 4.6 cu ft capacity for everyday loads. Features WiFi connectivity, steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0046",
+    "brand": "HOMEPRO",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 4781,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "PREMIUM",
+    "specifications": {
+      "capacity": 4.5,
+      "energyRating": "A_PLUS_PLUS",
+      "noiseLevel": 52,
+      "spinSpeed": 1500,
+      "width": 28,
+      "height": 40,
+      "depth": 32,
+      "weight": 207
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": true,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Premium quality with advanced features front-load washer from HomePro. Spacious 4.5 cu ft capacity for everyday loads. Features WiFi connectivity, steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0047",
+    "brand": "COOKMASTER",
+    "color": "WHITE",
+    "price": {
+      "displayPrice": {
+        "amount": 4226,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "PREMIUM",
+    "specifications": {
+      "capacity": 4.9,
+      "energyRating": "A_PLUS_PLUS",
+      "noiseLevel": 56,
+      "spinSpeed": 1500,
+      "width": 27,
+      "height": 41,
+      "depth": 34,
+      "weight": 208
+    },
+    "features": {
+      "wifiEnabled": false,
+      "smartDiagnosis": true,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Premium quality with advanced features front-load washer from CookMaster. Spacious 4.9 cu ft capacity for everyday loads. Features steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0048",
+    "brand": "APPLIANCE_PLUS",
+    "color": "SILVER",
+    "price": {
+      "displayPrice": {
+        "amount": 5477,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "LUXURY",
+    "specifications": {
+      "capacity": 5.8,
+      "energyRating": "A_PLUS_PLUS",
+      "noiseLevel": 48,
+      "spinSpeed": 1600,
+      "width": 30,
+      "height": 42,
+      "depth": 31,
+      "weight": 238
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": true,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Top-of-the-line luxury appliance front-load washer from Appliance Plus. Extra-large 5.8 cu ft capacity perfect for families. Features WiFi connectivity, steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0049",
+    "brand": "APPLIANCE_PLUS",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 7087,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "LUXURY",
+    "specifications": {
+      "capacity": 5.8,
+      "energyRating": "A_PLUS_PLUS_PLUS",
+      "noiseLevel": 49,
+      "spinSpeed": 1800,
+      "width": 28,
+      "height": 39,
+      "depth": 30,
+      "weight": 237
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": true,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Top-of-the-line luxury appliance front-load washer from Appliance Plus. Extra-large 5.8 cu ft capacity perfect for families. Features WiFi connectivity, steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  },
+  {
+    "id": "WM_0050",
+    "brand": "APPLIANCE_PLUS",
+    "color": "BLACK",
+    "price": {
+      "displayPrice": {
+        "amount": 5640,
+        "currency": "USD"
+      }
+    },
+    "productFamily": {
+      "id": "Washing_Machines",
+      "name": "Washers"
+    },
+    "priceTier": "LUXURY",
+    "specifications": {
+      "capacity": 5.9,
+      "energyRating": "A_PLUS_PLUS",
+      "noiseLevel": 51,
+      "spinSpeed": 1800,
+      "width": 30,
+      "height": 42,
+      "depth": 30,
+      "weight": 182
+    },
+    "features": {
+      "wifiEnabled": true,
+      "smartDiagnosis": false,
+      "voiceControl": true,
+      "energyStarCertified": true,
+      "waterSenseApproved": true,
+      "steamCleaning": true,
+      "allergenCycle": true,
+      "quickWash": true,
+      "sanitizeCycle": true,
+      "stainlessSteelDrum": true,
+      "directDriveMotor": true
+    },
+    "description": "Top-of-the-line luxury appliance front-load washer from Appliance Plus. Extra-large 5.9 cu ft capacity perfect for families. Features WiFi connectivity, steam cleaning, allergen removal, sanitize cycle for superior cleaning. Built with stainless steel drum and direct drive motor for durability."
+  }
+]
