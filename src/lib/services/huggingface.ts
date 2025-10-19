@@ -1,20 +1,10 @@
+import { HfInference } from '@huggingface/inference';
 import type { AvailableFilter } from '../types';
 
 /**
- * HuggingFace API Service
- * Handles communication with HuggingFace Inference API
+ * HuggingFace API Service using official SDK
  */
 
-const HUGGINGFACE_API_URL =
-  'https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2';
-
-interface HuggingFaceResponse {
-  generated_text: string;
-}
-
-/**
- * Builds the prompt for the LLM with business rules and filter context
- */
 function buildPrompt(
   userQuery: string,
   availableFilters: AvailableFilter[],
@@ -24,11 +14,28 @@ function buildPrompt(
 AVAILABLE FILTERS:
 ${JSON.stringify(availableFilters, null, 2)}
 
+ATTRIBUTE PATHS (CRITICAL - USE EXACT PATHS):
+- Energy Rating: "specifications.energyRating" (NOT "energyRating")
+- Capacity: "specifications.capacity" (NOT "capacity")
+- Noise Level: "specifications.noiseLevel" (NOT "noiseLevel")
+- Spin Speed: "specifications.spinSpeed" (NOT "spinSpeed")
+- Price Tier: "priceTier"
+- Brand: "brand"
+- Color: "color"
+- WiFi: "features.wifiEnabled"
+- Smart Diagnosis: "features.smartDiagnosis"
+- Steam Cleaning: "features.steamCleaning"
+- Allergen Cycle: "features.allergenCycle"
+- Sanitize Cycle: "features.sanitizeCycle"
+- Energy Star: "features.energyStarCertified"
+- Stainless Steel Drum: "features.stainlessSteelDrum"
+- Direct Drive Motor: "features.directDriveMotor"
+
 BUSINESS RULES - CAPACITY MAPPING:
-- "small family" OR "2-3 people" → capacity: 4.0-4.5 cu ft
-- "big family" OR "large family" OR "4+ people" → capacity: 5.0+ cu ft
-- "apartment" OR "compact" → capacity: 3.5-4.2 cu ft
-- "family sized" → capacity: 4.5+ cu ft
+- "small family" OR "2-3 people" → specifications.capacity: 4.0-4.5 cu ft
+- "big family" OR "large family" OR "4+ people" → specifications.capacity: 5.0+ cu ft
+- "apartment" OR "compact" → specifications.capacity: 3.5-4.2 cu ft
+- "family sized" → specifications.capacity: 4.5+ cu ft
 
 BUSINESS RULES - PRICE MAPPING:
 - "under $X" OR "below $X" OR "less than $X" → price maxValue: X
@@ -40,40 +47,30 @@ BUSINESS RULES - PRICE MAPPING:
 - "luxury" → priceTier: LUXURY
 
 BUSINESS RULES - FEATURES:
-- "energy efficient" OR "eco-friendly" → energyRating: A_PLUS_PLUS or A_PLUS_PLUS_PLUS
+- "energy efficient" OR "eco-friendly" → specifications.energyRating: A_PLUS_PLUS or A_PLUS_PLUS_PLUS
 - "WiFi" OR "smart" OR "connected" → features.wifiEnabled: true
-- "quiet" OR "silent" → noiseLevel: maxValue 60
+- "quiet" OR "silent" → specifications.noiseLevel: maxValue 60
 - "steam" → features.steamCleaning: true
 - "allergen" OR "allergy" → features.allergenCycle: true
 - "sanitize" OR "antibacterial" → features.sanitizeCycle: true
-
-ATTRIBUTE PATHS FOR FEATURES (IMPORTANT):
-- WiFi: "features.wifiEnabled"
-- Smart Diagnosis: "features.smartDiagnosis"
-- Steam Cleaning: "features.steamCleaning"
-- Allergen Cycle: "features.allergenCycle"
-- Sanitize Cycle: "features.sanitizeCycle"
-- Energy Star: "features.energyStarCertified"
-- Stainless Steel Drum: "features.stainlessSteelDrum"
-- Direct Drive Motor: "features.directDriveMotor"
 
 USER QUERY: "${userQuery}"
 
 INSTRUCTIONS:
 1. Extract filter requirements from the user query
 2. Map to available filters using business rules above
-3. Use exact attribute names from AVAILABLE FILTERS
-4. For features, use full path like "features.wifiEnabled"
-5. Return ONLY valid JSON, no explanations
+3. Use EXACT attribute paths from ATTRIBUTE PATHS section
+4. Return ONLY valid JSON, no explanations
 
 OUTPUT FORMAT (JSON ONLY):
 {
   "rangeFilters": [
-    { "attribute": "price", "minValue": 500, "maxValue": 1000 }
+    { "attribute": "price", "maxValue": 800 },
+    { "attribute": "specifications.capacity", "minValue": 4.0, "maxValue": 4.5 }
   ],
   "standardFilters": [
     { "attribute": "priceTier", "operator": "OR", "valueType": "SINGLE", "values": ["BUDGET"] },
-    { "attribute": "features.wifiEnabled", "operator": "AND", "valueType": "SINGLE", "values": ["true"] }
+    { "attribute": "specifications.energyRating", "operator": "OR", "valueType": "MULTI", "values": ["A_PLUS_PLUS", "A_PLUS_PLUS_PLUS"] }
   ],
   "confidence": 0.85
 }
@@ -81,15 +78,9 @@ OUTPUT FORMAT (JSON ONLY):
 Return ONLY the JSON object, nothing else.`;
 }
 
-/**
- * Extracts JSON from LLM response
- * Handles cases where LLM wraps JSON in markdown code blocks or adds text
- */
 function extractJSON(text: string): string {
-  // Remove markdown code blocks if present
   let cleaned = text.replace(/```json\n?/g, '').replace(/```\n?/g, '');
 
-  // Find JSON object boundaries
   const jsonStart = cleaned.indexOf('{');
   const jsonEnd = cleaned.lastIndexOf('}');
 
@@ -100,9 +91,6 @@ function extractJSON(text: string): string {
   return cleaned.substring(jsonStart, jsonEnd + 1);
 }
 
-/**
- * Calls HuggingFace API with retry logic
- */
 export async function callHuggingFace(
   userQuery: string,
   availableFilters: AvailableFilter[],
@@ -114,65 +102,50 @@ export async function callHuggingFace(
     throw new Error('HUGGINGFACE_API_KEY is not set in environment variables');
   }
 
+  console.log('🔑 Using HuggingFace Inference SDK');
+
+  const hf = new HfInference(apiKey);
   const prompt = buildPrompt(userQuery, availableFilters);
 
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      const response = await fetch(HUGGINGFACE_API_URL, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          inputs: prompt,
-          parameters: {
-            max_new_tokens: 500,
-            temperature: 0.3, // Lower temperature for more consistent JSON
-            top_p: 0.95,
-            return_full_text: false,
+      console.log(`🤖 HuggingFace API attempt ${attempt + 1}...`);
+
+      // Use chatCompletion instead of textGeneration
+      const result = await hf.chatCompletion({
+        model: 'mistralai/Mistral-7B-Instruct-v0.3',
+        messages: [
+          {
+            role: 'user',
+            content: prompt,
           },
-        }),
+        ],
+        max_tokens: 500,
+        temperature: 0.3,
       });
 
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(
-          `HuggingFace API error: ${response.status} - ${errorText}`,
-        );
-      }
+      const generatedText = result.choices[0]?.message?.content || '';
+      console.log('📦 Raw response:', generatedText.substring(0, 200));
 
-      const data = await response.json();
-
-      // HuggingFace returns array of responses
-      if (!Array.isArray(data) || data.length === 0) {
-        throw new Error('Invalid response format from HuggingFace');
-      }
-
-      const generatedText = data[0].generated_text;
-
-      // Extract and parse JSON
       const jsonText = extractJSON(generatedText);
       const parsedResult = JSON.parse(jsonText);
 
-      console.log('✅ HuggingFace API call successful');
+      console.log('✅ HuggingFace SDK call successful');
       console.log('📊 Filter confidence:', parsedResult.confidence || 'N/A');
 
       return parsedResult;
     } catch (error) {
-      console.error(`❌ HuggingFace API attempt ${attempt + 1} failed:`, error);
+      console.error(`❌ HuggingFace SDK attempt ${attempt + 1} failed:`, error);
 
-      // If this was the last retry, throw the error
       if (attempt === retries) {
         throw error;
       }
 
-      // Wait before retrying (exponential backoff)
-      await new Promise((resolve) =>
-        setTimeout(resolve, 1000 * Math.pow(2, attempt)),
-      );
+      const waitTime = 1000 * Math.pow(2, attempt);
+      console.log(`⏳ Waiting ${waitTime}ms before retry...`);
+      await new Promise((resolve) => setTimeout(resolve, waitTime));
     }
   }
 
-  throw new Error('All HuggingFace API retry attempts failed');
+  throw new Error('All HuggingFace SDK retry attempts failed');
 }

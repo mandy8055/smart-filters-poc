@@ -34,6 +34,8 @@ export async function POST(request: NextRequest) {
 
     try {
       response = await callHuggingFace(prompt, availableFilters);
+      // Fix common AI mistakes: move misplaced filters
+      response = normalizeFilterResponse(response);
     } catch (huggingFaceError) {
       console.error('❌ HuggingFace API failed, attempting fallback...');
 
@@ -216,4 +218,100 @@ function ruleBasedFallback(prompt: string): SmartFilterResponse {
     standardFilters,
     confidence: 0.5, // Lower confidence for fallback
   };
+}
+
+/**
+ * Normalizes AI response by fixing common mistakes
+ * - Moves standard filters that were placed in rangeFilters
+ * - Fixes attribute paths (e.g., energyRating → specifications.energyRating)
+ * - Ensures proper structure
+ */
+function normalizeFilterResponse(response: any): SmartFilterResponse {
+  const normalized: SmartFilterResponse = {
+    rangeFilters: [],
+    standardFilters: response.standardFilters || [],
+    confidence: response.confidence,
+  };
+
+  // Attribute path mappings (fix common AI mistakes)
+  const attributePathFixes: { [key: string]: string } = {
+    energyRating: 'specifications.energyRating',
+    capacity: 'specifications.capacity',
+    noiseLevel: 'specifications.noiseLevel',
+    spinSpeed: 'specifications.spinSpeed',
+  };
+
+  // Standard filter attributes (should NOT be in rangeFilters)
+  const standardFilterAttributes = [
+    'priceTier',
+    'brand',
+    'color',
+    'specifications.energyRating',
+    'energyRating', // Legacy - will be auto-fixed
+    'features.wifiEnabled',
+    'features.smartDiagnosis',
+    'features.steamCleaning',
+    'features.allergenCycle',
+    'features.sanitizeCycle',
+    'features.energyStarCertified',
+    'features.stainlessSteelDrum',
+    'features.directDriveMotor',
+  ];
+
+  // Process rangeFilters
+  response.rangeFilters?.forEach((filter: any) => {
+    // Fix attribute path if needed
+    let attribute = filter.attribute;
+    if (attributePathFixes[attribute]) {
+      console.log(
+        `🔧 Fixing path: ${attribute} → ${attributePathFixes[attribute]}`,
+      );
+      attribute = attributePathFixes[attribute];
+    }
+
+    // Check if this is actually a standard filter
+    if (
+      standardFilterAttributes.includes(attribute) ||
+      standardFilterAttributes.includes(filter.attribute)
+    ) {
+      console.log(
+        `⚠️ Moving ${attribute} from rangeFilters to standardFilters`,
+      );
+
+      normalized.standardFilters.push({
+        attribute: attribute,
+        operator: filter.operator || 'OR',
+        valueType: filter.valueType || 'SINGLE',
+        values: filter.values || [],
+      });
+    } else {
+      normalized.rangeFilters.push({
+        attribute: attribute,
+        minValue: filter.minValue,
+        maxValue: filter.maxValue,
+      });
+    }
+  });
+
+  // Process standardFilters - fix paths
+  normalized.standardFilters = normalized.standardFilters.map((filter) => {
+    let attribute = filter.attribute;
+    if (attributePathFixes[attribute]) {
+      console.log(
+        `🔧 Fixing path: ${attribute} → ${attributePathFixes[attribute]}`,
+      );
+      attribute = attributePathFixes[attribute];
+    }
+    return {
+      ...filter,
+      attribute,
+    };
+  });
+
+  console.log('✅ Normalized response:', {
+    rangeFilters: normalized.rangeFilters.length,
+    standardFilters: normalized.standardFilters.length,
+  });
+
+  return normalized;
 }

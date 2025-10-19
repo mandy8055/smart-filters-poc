@@ -106,7 +106,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Description */}
-        <p className='text-sm text-gray-600 mb-3 line-clamp-2'>{description}</p>
+        {/* <p className='text-sm text-gray-600 mb-3 line-clamp-2'>{description}</p> */}
 
         {/* Key Features Tags */}
         {keyFeatures.length > 0 && (
